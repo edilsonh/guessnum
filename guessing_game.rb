@@ -8,26 +8,21 @@ for i in 0..4
   chances = 4 - i
   print "\n"
 
+  if guess.include?(number)
+    puts "You just guessed that SMARTY"
+  end
+
   if number === rand_num
     puts "You got it right! Play again later please!"
     break
 
   elsif number === 0
-    if guess.include?(number)
-      puts "You just guessed that SMARTY"
-    end
     puts "Invalid input, try again"
 
   elsif number > rand_num
-    if guess.include?(number)
-      puts "You just guessed that SMARTY"
-    end
     puts "Too high..."
 
   elsif 0 < number and number < rand_num
-    if guess.include?(number)
-      puts "You just guessed that SMARTY"
-    end
     puts "Too low..."
 
   end
